@@ -80,6 +80,7 @@ export default Component.extend({
 
 
   dragStart(event) {
+    event.stopPropagation()
     if (!this.get('isDraggable') || !this.get('dragReady')) {
       event.preventDefault();
       return;
